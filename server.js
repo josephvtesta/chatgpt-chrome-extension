@@ -70,7 +70,7 @@ async function start() {
     text: `Training ChatGPT (${Config.rules.length} plugin rules)`,
   });
   await oraPromise(
-    new Promise((resolve) => app.listen(3000, () => resolve())),
+    new Promise((resolve) => app.listen(process.env.PORT || 3000, () => resolve())),
     {
       text: `You may now use the extension`,
     }
